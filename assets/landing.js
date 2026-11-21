@@ -19,7 +19,7 @@
     store.set('lang', l);
   }
   document.querySelectorAll('[data-lang]').forEach(function (b) { b.addEventListener('click', function () { setLang(b.getAttribute('data-lang')); }); });
-  var lang = store.get('lang') || (/^ru/i.test(navigator.language || '') ? 'ru' : 'en');
+  var lang = store.get('lang') || ('en');
   var q = location.search.match(/[?&]lang=(en|ru)/); if (q) lang = q[1];
   setLang(lang);
 
